@@ -8,6 +8,8 @@ import org.sopt.lequuServer.domain.book.dto.response.BookDetailResponseDto;
 import org.sopt.lequuServer.domain.book.model.Book;
 import org.sopt.lequuServer.domain.book.repository.BookRepository;
 import org.sopt.lequuServer.domain.book.service.BookService;
+import org.sopt.lequuServer.domain.favorite.model.Favorite;
+import org.sopt.lequuServer.domain.favorite.repository.FavoriteRepository;
 import org.sopt.lequuServer.domain.member.model.Member;
 import org.sopt.lequuServer.domain.member.repository.MemberRepository;
 import org.sopt.lequuServer.domain.note.model.Note;
@@ -33,6 +35,7 @@ public class BookFacade {
     private final BookService bookService;
     private final MemberRepository memberRepository;
     private final BookRepository bookRepository;
+    private final FavoriteRepository favoriteRepository;
     private final NoteRepository noteRepository;
     private final StickerRepository stickerRepository;
     private final PostedStickerRepository postedStickerRepository;
@@ -76,6 +79,10 @@ public class BookFacade {
     public void deleteBook(Long bookId) {
         // bookId가 올바른건지 검증
         Book book = bookRepository.findByIdOrThrow(bookId);
+
+        // 레큐북 id에 속하는 즐겨찾기 삭제
+        List<Favorite> favorites = book.getFavorites();
+        favoriteRepository.deleteAllInBatch(favorites);
 
         // 레큐북 id에 속하는 레큐노트 삭제
         List<Note> notes = book.getNotes();
