@@ -1,8 +1,8 @@
 package org.sopt.lequuServer.domain.common.facade;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,6 +13,7 @@ import org.sopt.lequuServer.domain.note.repository.NoteRepository;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StreamUtils;
 
 @Service
 @RequiredArgsConstructor
@@ -38,10 +39,9 @@ public class CommonFacade {
         try {
             // src/main/resources 디렉토리의 data.json 파일 경로 읽기
             ClassPathResource resource = new ClassPathResource("lottie.json");
-            Path path = resource.getFile().toPath();
-            String json = Files.readString(path);
+            InputStream inputStream = resource.getInputStream();
 
-            return json;
+            return StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
         } catch (IOException e) {
             log.error("IOE Error: {e}", e);
         }
