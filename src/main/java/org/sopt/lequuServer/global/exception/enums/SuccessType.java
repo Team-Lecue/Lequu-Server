@@ -30,6 +30,7 @@ public enum SuccessType {
     GET_FAVORITE_SUCCESS(HttpStatus.OK, "즐겨찾는 레큐북 조회에 성공했습니다."),
     GET_MYPAGE_FAVORITE_SUCCESS(HttpStatus.OK, "마이페이지의 내 즐겨찾기 조회에 성공했습니다."),
     GET_MYPAGE_SUCCESS(HttpStatus.OK, "마이페이지 조회에 성공했습니다."),
+    GET_LOTTIE_SUCCESS(HttpStatus.OK, "로띠 json 조회에 성공했습니다."),
 
     /**
      * 201 CREATED

@@ -1,5 +1,6 @@
 package org.sopt.lequuServer.domain.common.controller;
 
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.sopt.lequuServer.domain.common.dto.response.PopularBookResponseDto;
 import org.sopt.lequuServer.domain.common.dto.response.SplashDto;
@@ -10,8 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -33,5 +32,10 @@ public class CommonController implements CommonApi {
     @GetMapping("/test")
     public ResponseEntity<ApiResponse<?>> test() {
         throw new RuntimeException("테스트용 에러 발생");
+    }
+
+    @GetMapping("/lottie")
+    public ResponseEntity<ApiResponse<String>> getLottie(){
+        return ResponseEntity.ok(ApiResponse.success(SuccessType.GET_LOTTIE_SUCCESS, commonFacade.getLottie()));
     }
 }
