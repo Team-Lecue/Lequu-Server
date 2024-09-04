@@ -8,7 +8,7 @@
 
 ## 💌️ 큐버(레큐 서버) 소개
 
-|                                                                이동섭 🔥                                                                 |                                                                김동휘 ⚡️                                                                 |                                                                현예진 ❄️️                                                                |
+|                                                                ddongseop 🔥                                                                 |                                                                김동휘 ⚡️                                                                 |                                                                현예진 ❄️️                                                                |
 |:-------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------:|
 | <img src="https://github.com/Team-Lecue/Lecue-Server/assets/67463603/67cf5665-ab6c-4eb0-8fa2-85a6dd8188b6" width="200" height="200"/> | <img src="https://github.com/Team-Lecue/Lecue-Server/assets/67463603/76b91fd6-3589-4c74-9b70-2b6e251ac384" width="200" height="200"/> | <img src="https://github.com/Team-Lecue/Lecue-Server/assets/67463603/25641e5f-9e28-4852-9458-380313c953cc" width="200" height="200"/> |
 |                                               [ddongseop](https://github.com/ddongseop)                                               |                                                [dong2ast](https://github.com/dong2ast)                                                |                                                [eeddiinn](https://github.com/eeddiinn)                                                |
@@ -17,11 +17,11 @@
 
 | 챌린징 요소 | 담당자 |
 | --- | --- |
-| Presigned URL (S3 Management) | 동섭🔥 |
-| Social Login (OpenFeign, Spring Security, Redis) | 동섭🔥 |
-| CI/CD Script 작성 (Github Actions) | 동섭🔥 |
-| AOP Logger 구현 + Discord 서버 알림 구현 | 동섭🔥 |
-| 서버 부하 테스트 (Jmeter) | 동섭🔥 |
+| Presigned URL (S3 Management) | ddongseop🔥 |
+| Social Login (OpenFeign, Spring Security, Redis) | ddongseop🔥 |
+| CI/CD Script 작성 (Github Actions) | ddongseop🔥 |
+| AOP Logger 구현 + Discord 서버 알림 구현 | ddongseop🔥 |
+| 서버 부하 테스트 (Jmeter) | ddongseop🔥 |
 | Soft Delete (RDS Management) | 예진❄️ |
 | 비속어 필터링 (Bad Word Filtering 라이브러리) | 예진❄️ |
 | Architecture (Docker Compose, Nginx) | 동휘⚡️ |
